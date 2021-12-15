@@ -1,0 +1,16 @@
+Class {
+	#name : #BaselineOfCounter,
+	#superclass : #BaselineOf,
+	#category : #BaselineOfCounter
+}
+
+{ #category : #baselines }
+BaselineOfCounter >> baseline: spec [
+    <baseline>
+    spec for: #common do: [	
+				
+        "Packages"
+        spec
+            package: 'Counter';
+            package: 'Counter-Tests' with: [ spec requires: #('Counter') ] ].
+]
